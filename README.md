@@ -17,12 +17,22 @@ Messages are stored in the topics and messages are guaranteed to be delivered at
 Idemponency  
 A message can be considered an idempotent operation. No matter how many times the message is sent, the result is the same. Idempotency of messages is important in pubsub design since messages get delivered at least once. 
 
-Queue  
-Messages are sent in a queue.
+Queueed messages 
+Messages are sent in a first in first out manner.
 
 Multiple Topics  
 There are multiple topics, where each topic stores different kinds of data.  
 
 # gRPC  
+
+There can be multiple microservices in the backend and communication between them uses gRPC. 
+
+gRPC benefits:  
+-brings significant improvements in convenience and scalability  
+-generates code (protocol buffers)  
+Side Note: In the proto files, you can define the schema for the data or messages being sent. You can set which fields are optional, what datatypes are expected, etc. You also define what procedures you want to expose for other microservices to make remote procedure calls or RPC to. When you run the proto file against a compiler, it generates source code in your respective language.  
+-performance is high because protocol buffers are serialized and sent as binaries rather than memory intensive key-value pairs like in json  
+
+
 
 

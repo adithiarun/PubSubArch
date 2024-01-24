@@ -17,7 +17,7 @@ Messages are stored in the topics and messages are guaranteed to be delivered at
 Idemponency  
 A message can be considered an idempotent operation. No matter how many times the message is sent, the result is the same. Idempotency of messages is important in pubsub design since messages get delivered at least once. 
 
-Queueed messages 
+Queued Messages   
 Messages are sent in a first in first out manner.
 
 Multiple Topics  
